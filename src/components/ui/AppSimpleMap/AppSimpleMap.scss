@@ -1,0 +1,22 @@
+.leaflet-container {
+  width: 350px;
+  height: 350px;
+}
+
+.leaflet-control-container {
+  display: none;
+}
+
+.app-simple-map.popup {
+  padding: 10px 0;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
+
+  a:hover {
+    // color: $primary;
+  }
+}

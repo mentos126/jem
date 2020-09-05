@@ -1,0 +1,10 @@
+// @import './assets/scss/_main.scss';
+@import './assets/scss/main';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+  color: $primary;
+}
