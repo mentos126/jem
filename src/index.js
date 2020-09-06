@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import './assets/bootstrap/css/sb-admin-2.min.css'
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+
+// import './index.scss'
+import 'materialize-css/dist/css/materialize.min.css'
+import 'materialize-css/dist/js/materialize'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,4 +1,3 @@
-// @import './assets/scss/_main.scss';
 @import './assets/scss/main';
 
 body {
@@ -6,5 +5,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fira Code', monospace;
-  color: $primary;
+  font-size:62.5%;
 }

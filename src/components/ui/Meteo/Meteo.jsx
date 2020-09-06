@@ -17,7 +17,7 @@ class Meteo extends Component {
       },
       previsionHour: [],
       previsionDay: [],
-      isLoading: true
+      isLoading: false
     }
   }
 

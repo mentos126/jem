@@ -4,8 +4,6 @@ import Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './AppSimpleMap.scss'
 
-
-
 delete Leaflet.Icon.Default.prototype._getIconUrl;
 
 Leaflet.Icon.Default.mergeOptions({

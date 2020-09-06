@@ -1,12 +1,18 @@
 import React from 'react'
-import './MainLayout.scss'
 
-function MainLayout({child1, child2}) {
+import './MainLayout.scss'
+import AppNavbar from '../../ui/AppNavbar/AppNavbar'
+import AppFooter from '../../ui/AppFooter/AppFooter'
+
+function MainLayout({children}) {
   return (
-    <div className="row">
-      <div className="col-sm-6">{child1}</div>
-      <div className="col-sm-6">{child2}</div>
-    </div>
+    <>
+      <AppNavbar />
+      <div className="container">
+        {children}
+      </div>
+      <AppFooter />
+    </>
   )
 }
 
