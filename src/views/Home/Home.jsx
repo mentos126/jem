@@ -49,7 +49,7 @@ function Home() {
 
   return (
     <MainLayout>
-      <>
+      <React.Fragment>
         <AppLogo/>
         <Row style={{marginTop: '10px'}}>
           <Col className="center" s={12} m={3}>
@@ -214,7 +214,7 @@ function Home() {
             </div>
           </Col>
         </Row>
-      </>
+      </React.Fragment>
     </MainLayout>
   )
 }
