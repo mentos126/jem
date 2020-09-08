@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jem/static/css/main.7b513541.chunk.css",
-    "main.js": "/jem/static/js/main.ff99bd20.chunk.js",
-    "main.js.map": "/jem/static/js/main.ff99bd20.chunk.js.map",
+    "main.js": "/jem/static/js/main.1cf178e3.chunk.js",
+    "main.js.map": "/jem/static/js/main.1cf178e3.chunk.js.map",
     "runtime-main.js": "/jem/static/js/runtime-main.9035bb67.js",
     "runtime-main.js.map": "/jem/static/js/runtime-main.9035bb67.js.map",
     "static/css/2.a1d5d349.chunk.css": "/jem/static/css/2.a1d5d349.chunk.css",
-    "static/js/2.010f0dae.chunk.js": "/jem/static/js/2.010f0dae.chunk.js",
-    "static/js/2.010f0dae.chunk.js.map": "/jem/static/js/2.010f0dae.chunk.js.map",
+    "static/js/2.cc93e973.chunk.js": "/jem/static/js/2.cc93e973.chunk.js",
+    "static/js/2.cc93e973.chunk.js.map": "/jem/static/js/2.cc93e973.chunk.js.map",
     "static/js/3.2f5a1b72.chunk.js": "/jem/static/js/3.2f5a1b72.chunk.js",
     "static/js/3.2f5a1b72.chunk.js.map": "/jem/static/js/3.2f5a1b72.chunk.js.map",
     "static/js/4.2a85df3a.chunk.js": "/jem/static/js/4.2a85df3a.chunk.js",
@@ -45,11 +45,11 @@
     "static/js/20.1b5af9ee.chunk.js": "/jem/static/js/20.1b5af9ee.chunk.js",
     "static/js/20.1b5af9ee.chunk.js.map": "/jem/static/js/20.1b5af9ee.chunk.js.map",
     "index.html": "/jem/index.html",
-    "precache-manifest.13ba7c890698f8fdaf53ed8a6147d915.js": "/jem/precache-manifest.13ba7c890698f8fdaf53ed8a6147d915.js",
+    "precache-manifest.4346a54c63e6e0a06a3551d112ee28e6.js": "/jem/precache-manifest.4346a54c63e6e0a06a3551d112ee28e6.js",
     "service-worker.js": "/jem/service-worker.js",
     "static/css/2.a1d5d349.chunk.css.map": "/jem/static/css/2.a1d5d349.chunk.css.map",
     "static/css/main.7b513541.chunk.css.map": "/jem/static/css/main.7b513541.chunk.css.map",
-    "static/js/2.010f0dae.chunk.js.LICENSE.txt": "/jem/static/js/2.010f0dae.chunk.js.LICENSE.txt",
+    "static/js/2.cc93e973.chunk.js.LICENSE.txt": "/jem/static/js/2.cc93e973.chunk.js.LICENSE.txt",
     "static/media/01d.svg": "/jem/static/media/01d.7f93fbdb.svg",
     "static/media/01n.svg": "/jem/static/media/01n.a3f3f38d.svg",
     "static/media/02d.svg": "/jem/static/media/02d.b931d84d.svg",
@@ -74,8 +74,8 @@
   "entrypoints": [
     "static/js/runtime-main.9035bb67.js",
     "static/css/2.a1d5d349.chunk.css",
-    "static/js/2.010f0dae.chunk.js",
+    "static/js/2.cc93e973.chunk.js",
     "static/css/main.7b513541.chunk.css",
-    "static/js/main.ff99bd20.chunk.js"
+    "static/js/main.1cf178e3.chunk.js"
   ]
 }
