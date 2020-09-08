@@ -1,0 +1,3 @@
+.app-football-feed .col:nth-child(even) .card{
+  flex-direction: row-reverse;
+}

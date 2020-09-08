@@ -1,9 +1,10 @@
-@import './assets/scss/main';
+// @import './assets/scss/main';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
-body {
+
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira Code', monospace;
-  font-size:62.5%;
+  font-family: 'Open Sans', 'Avenir', Helvetica, Arial, sans-serif;
 }

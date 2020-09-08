@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, NavItem, Icon } from 'react-materialize';
+import { Icon, Navbar, NavItem, Dropdown } from 'react-materialize';
 
 import logo from './Logo_JEM.jpg'
 
@@ -9,15 +9,10 @@ function AppNavbar() {
         className="light-blue accent-2"
         alignLinks="right"
         brand={
-          <a className=" brand-logo" href="/">
-            <img height="64px" src={logo} alt="logo jem" />
+          <a style={{height: '100%'}} className="brand-logo" href="/">
+            <img style={{height: '100%'}} src={logo} alt="logo jem" />
           </a>
         }
-        // extendWith={<div className="row">
-        //   <div class="col s12">
-        //     <span className="flow-text">JEUNES ESPOIRS MONTALBANAIS</span>
-        //   </div>
-        // </div>}
         id="mobile-nav"
         menuIcon={<Icon>menu</Icon>}
         fixed
@@ -35,15 +30,7 @@ function AppNavbar() {
         >
           <NavItem href="/">Accueil</NavItem>
           <NavItem href="components.html">Le Club</NavItem>
-          <NavItem href="components.html">Entrainements</NavItem>
-          <NavItem href="components.html">Équipes</NavItem>
-          <NavItem href="components.html">Calendrier Hebdomadaire</NavItem>
-          <NavItem href="components.html">Convocations</NavItem>
-          <NavItem href="components.html">Photos</NavItem>
-          <NavItem href="components.html">Documents</NavItem>
-          <NavItem href="components.html">Divers</NavItem>
-          <NavItem href="components.html">Contact</NavItem>
-          {/* <Dropdown
+          <Dropdown
             id="Dropdown_6"
             options={{
               alignment: 'left',
@@ -51,7 +38,7 @@ function AppNavbar() {
               closeOnClick: true,
               constrainWidth: true,
               container: null,
-              coverTrigger: true,
+              coverTrigger: false,
               hover: false,
               inDuration: 150,
               onCloseEnd: null,
@@ -60,7 +47,7 @@ function AppNavbar() {
               onOpenStart: null,
               outDuration: 250
             }}
-            trigger={<a href="#!">Dropdown{' '}<Icon right>arrow_drop_down</Icon></a>}
+            trigger={<a href="#!">Entrainements{' '}<Icon right>arrow_drop_down</Icon></a>}
           >
             <a href="/">
               one
@@ -68,11 +55,17 @@ function AppNavbar() {
             <a href="/">
               two
             </a>
-            <Divider />
             <a href="/">
               three
             </a>
-          </Dropdown> */}
+          </Dropdown>
+          <NavItem href="components.html">Équipes</NavItem>
+          <NavItem href="components.html">Calendrier Hebdomadaire</NavItem>
+          <NavItem href="components.html">Convocations</NavItem>
+          <NavItem href="components.html">Photos</NavItem>
+          <NavItem href="components.html">Documents</NavItem>
+          <NavItem href="components.html">Divers</NavItem>
+          <NavItem href="components.html">Contact</NavItem>
         </Navbar>
   )
 }

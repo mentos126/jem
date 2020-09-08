@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-import loader from './resources/chargement/circles.svg'
+import loader from './resources/loading/circles.svg'
 
-import './Meteo.scss'
+import './AppWeather.scss'
 
-class Meteo extends Component {
+class AppWeather extends Component {
 
   constructor (props) {
     super(props)
@@ -148,4 +148,4 @@ class Meteo extends Component {
   )}
 }
 
-export default Meteo
+export default AppWeather
