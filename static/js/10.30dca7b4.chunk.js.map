@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/ui/AppWeather/resources/logo/04n.svg"],"names":["module","exports"],"mappings":"gFAAAA,EAAOC,QAAU,IAA0B","file":"static/js/10.30dca7b4.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/04n.bf91ac0f.svg\";"],"sourceRoot":""}
