@@ -1,7 +1,7 @@
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faExternalLinkAlt, faPrint } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import M from 'materialize-css/dist/js/materialize'
+// import M from 'materialize-css/dist/js/materialize'
 import React from 'react'
 import { Button, Carousel, Col, Icon, Modal, NavItem, Row, Textarea, TextInput } from 'react-materialize'
 
@@ -36,11 +36,11 @@ function Home() {
     )
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const instance = M.Carousel.init(document.querySelectorAll('.carousel'), {})[0];
-    setInterval(() => {instance.el.M_Carousel.next()}, 1500)
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   const instance = M.Carousel.init(document.querySelectorAll('.carousel'), {})[0];
+  //   setInterval(() => {instance.el.M_Carousel.next()}, 1500)
   
-  });
+  // });
 
   const openFacebook = () => {
     // Linking

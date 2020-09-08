@@ -27,7 +27,7 @@
     "style-loader": "^1.2.1"
   },
   "scripts": {
-    "deploy": "yarn run build && gh-pages -d build",
+    "deploy": "yarn build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
