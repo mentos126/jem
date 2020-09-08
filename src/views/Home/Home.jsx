@@ -2,13 +2,24 @@ import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faExternalLinkAlt, faPrint } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Col, NavItem, Row, Card } from 'react-materialize'
+import { Button, Col, Icon, NavItem, Row, Carousel } from 'react-materialize'
+import M from 'materialize-css/dist/js/materialize'
 
+import cathycoiff from '../../assets/img/cathycoiff.jpg'
+import estrela from '../../assets/img/estrela.jpg'
+import garageZabalo from '../../assets/img/garage_zabalo.jpg'
+import interSport from '../../assets/img/inter_sport.jpg'
+import joseCastro from '../../assets/img/jose_castro.jpg'
+import midbat from '../../assets/img/midbat.jpg'
+import montauban from '../../assets/img/montauban.jpg'
+import silouette from '../../assets/img/silouette.png'
 import MainLayout from '../../components/layout/MainLayout/MainLayout'
 import AppFootballFeeds from '../../components/ui/AppFootballFeeds/AppFootbalFeeds'
 import AppLogo from '../../components/ui/AppLogo/AppLogo'
 import AppSimpleMap from '../../components/ui/AppSimpleMap/AppSimpleMap'
 import AppWeather from '../../components/ui/AppWeather/AppWeather'
+
+import './Home.scss'
 
 function Home() {
   const openTo = 'https://www.google.com/maps/place/Jeunes+Espoirs+Montalbanais/@44.0102843,1.3379906,18z/data=!4m8!1m2!2m1!1sRue+Louis+sabatier+Stade+de+Pouty!3m4!1s0x0:0xc6b8bd8d4cfa58!8m2!3d44.0104957!4d1.3380649'
@@ -25,6 +36,12 @@ function Home() {
     )
   }
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const instance = M.Carousel.init(document.querySelectorAll('.carousel'), {})[0];
+    setInterval(() => {instance.el.M_Carousel.next()}, 1500)
+  
+  });
+
   const openFacebook = () => {
     // Linking
 		window.open('//fb.com/share.php?u=http://club.quomodo.com/jem')
@@ -34,9 +51,12 @@ function Home() {
     <MainLayout>
       <>
         <AppLogo/>
-        <Row>
-          <Col s={12}>
-            <blockquote style={{borderLeft: '5px solid #40c4ff'}}>
+        <Row style={{marginTop: '10px'}}>
+          <Col className="center" s={12} m={3}>
+            <img src={silouette} alt="silouette footballeur"/>
+          </Col>
+          <Col s={12} m={9}>
+            <blockquote style={{borderLeft: '5px solid #40c4ff', textAlign: 'justify '}}>
               Bienvenue sur le site des Jeunes Espoirs Montalbanais ! <br/>
               Nous sommes heureux de vous faire partager nos actualités, nos commentaires, nos photos, et davantage...
             </blockquote>
@@ -45,36 +65,85 @@ function Home() {
         <Row>
           <Col m={6}>
             <blockquote style={{borderLeft: '5px solid #40c4ff'}}>
-              Les Jeunes Espoirs Montalbanais (JEM) école de football créée en 1986 est réputée pour sa formation des jeunes au  niveau du département du Tarn-et-Garonne.
-              Fort de plus de 300 licenciés, le club accueille les enfants de la catégorie U6 (5 ans) à la catégorie Séniors sur la plaine de jeux de Port Canal (stade de Pouty) et le stade du Saulou.
-              <br/>
+              <p style={{textAlign: 'justify '}}>
+                Les Jeunes Espoirs Montalbanais (JEM) école de football créée en 1986 est réputée pour sa formation des jeunes au  niveau du département du Tarn-et-Garonne.
+                Fort de plus de 300 licenciés, le club accueille les enfants de la catégorie U6 (5 ans) à la catégorie Séniors sur la plaine de jeux de Port Canal (stade de Pouty) et le stade du Saulou.
+              </p>
+              <br/><br/>
               Téléphone:  
               <br/>
               Adresse postale :
               <br/>
               Mail :
-              <br/>
-              <FontAwesomeIcon icon={faFacebook} title="Partager la note sur Facebook" onClick={() => openFacebook()}/>
-              <FontAwesomeIcon icon={faTwitter} title="Partager la note sur Twitter" /> 
-              <FontAwesomeIcon icon={faEnvelope} title="Faites passer l'info ! Envoi de la news par mail" /> 
+              <br/><br/>
+              <FontAwesomeIcon icon={faFacebook} title="Partager la note sur Facebook" onClick={() => openFacebook()}/> &nbsp;
+              <FontAwesomeIcon icon={faTwitter} title="Partager la note sur Twitter" /> &nbsp;
+              <FontAwesomeIcon icon={faEnvelope} title="Faites passer l'info ! Envoi de la news par mail" /> &nbsp;
               <FontAwesomeIcon icon={faPrint} title="Imprimer la news sur un A4" /> 
             </blockquote>
           </Col>
           <Col m={6}>
             <h4 className="red-text text-darken-2 white center">LES PARTENAIRES DU CLUB</h4>
+            <div className="container center">
+              <a href="https://www.montauban.com/">
+                <img width="197px" src={montauban} alt="montauban" style={{margin: '0'}}/>
+              </a>
+              <img width="197px" src={interSport} alt="montauban" style={{margin: '0'}}/>
+            </div>
           </Col>
         </Row>
+            
         <Row>
           <Col l={6}>
             <h4 className="red-text text-darken-2 white center">MATCHS DU WEEKEND</h4>
+            <div className="container center">
+              <hr/>
+                Aucun évènement
+              <hr/>
+            </div>
           </Col>
           <Col l={6}>
             <h4 className="red-text text-darken-2 white center">LES PARTENAIRES DU CLUB</h4>
+            <div className="grey lighten-2">
+              <Carousel
+                carouselId="Carousel-2"
+                style={{
+                  height: '250px'
+                }}
+                centerImages
+                images={[
+                  cathycoiff,
+                  joseCastro,
+                  estrela,
+                  garageZabalo,
+                  midbat
+                ]}
+                options={{
+                  dist: -100,
+                  duration: 200,
+                  fullWidth: false,
+                  indicators: false,
+                  noWrap: false,
+                  numVisible: 5,
+                  onCycleTo: null,
+                  padding: 0,
+                  shift: 0
+                }}
+                />
+            </div>
           </Col>
         </Row>
         <Row>
-          <Col l={6}>
+          <Col l={6} m={12} s={12}>
             <h4 className="red-text text-darken-2 white center">REPORTAGES</h4>
+            <div className="container center">
+              <blockquote style={{borderLeft: '5px solid #40c4ff'}}>
+                <blockquote style={{border: 'none'}}>Pour voir les reportage de la JEM</blockquote>
+                <Button node="a" waves="light" href="./reportage" className="light-blue accent-3 white-text text-darken-2">
+                  cliquez ici <Icon right>keyboard_arrow_right</Icon>
+                </Button>
+              </blockquote>
+            </div>
           </Col>
           <Col l={6} m={12} s={12}>
             <h4 className="red-text text-darken-2 white center">SITUATION DU CLUB</h4>
@@ -82,7 +151,7 @@ function Home() {
           </Col>
         </Row>
         <Row>
-          <Col l={6}>
+          <Col l={6} m={12} s={12}>
             <h4 className="red-text text-darken-2 white center">COMMENTAIRES</h4>
           </Col>
           <Col l={6} m={12} s={12}>
@@ -94,7 +163,7 @@ function Home() {
           <Col s={12}>
             <h4 className="red-text text-darken-2 white center">ACTUS GÉNÉRALES</h4>
             <div className="container">
-              <AppFootballFeeds />
+              {/* <AppFootballFeeds /> */}
             </div>
           </Col>
         </Row>

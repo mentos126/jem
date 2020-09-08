@@ -1,7 +1,7 @@
 import React from 'react'
-import { Icon, Navbar, NavItem, Dropdown } from 'react-materialize';
+import { Dropdown, Icon, Navbar, NavItem } from 'react-materialize';
 
-import logo from './Logo_JEM.jpg'
+import logo from '../../../assets/img/Logo_JEM.jpg'
 
 function AppNavbar() {
   return (

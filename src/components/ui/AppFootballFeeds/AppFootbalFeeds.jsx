@@ -10,6 +10,7 @@ function AppFootballFeeds() {
   useEffect(() => {
     fetch(uri).then(response => response.json())
       .then(data => setFeeds(data.content.feed.items))
+      .catch(error => {})
   }, [])
 
   const replaceUrlImage = url => {
@@ -34,7 +35,7 @@ function AppFootballFeeds() {
                     </Col>)
                   }
                 </Row>
-                <Row style={{margin: '0'}} classNAme="light-blue-text text-darken-4">
+                <Row style={{margin: '0'}} className="light-blue-text text-darken-4">
                   {feed.content.title}
                 </Row>
               </Card>
