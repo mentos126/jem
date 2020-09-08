@@ -1,9 +1,9 @@
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faExternalLinkAlt, faPrint } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import { Button, Col, Icon, NavItem, Row, Carousel } from 'react-materialize'
 import M from 'materialize-css/dist/js/materialize'
+import React from 'react'
+import { Button, Carousel, Col, Icon, Modal, NavItem, Row, Textarea, TextInput } from 'react-materialize'
 
 import cathycoiff from '../../assets/img/cathycoiff.jpg'
 import estrela from '../../assets/img/estrela.jpg'
@@ -153,6 +153,53 @@ function Home() {
         <Row>
           <Col l={6} m={12} s={12}>
             <h4 className="red-text text-darken-2 white center">COMMENTAIRES</h4>
+            <div className="container center">
+              <blockquote style={{borderLeft: '5px solid #40c4ff'}}>
+                <blockquote style={{border: 'none'}}>
+                  Laissez ici vos commentaires et suggestions afin d'améliorer le site et le fonctionnement de la JEM
+                </blockquote>
+                <Modal
+                  actions={[
+                    <Button modal="close" node="button" className="blue accent-2" waves="light">Ajouter</Button>,
+                    <Button modal="close" node="button" className="red accent-2" waves="red">Annuler</Button>
+                  ]}
+                  bottomSheet={false}
+                  fixedFooter={false}
+                  header="Ajoutez votre commentaire"
+                  id="Modal-0"
+                  open={false}
+                  options={{
+                    dismissible: true,
+                    endingTop: '10%',
+                    inDuration: 250,
+                    onCloseEnd: null,
+                    onCloseStart: null,
+                    onOpenEnd: null,
+                    onOpenStart: null,
+                    opacity: 0.5,
+                    outDuration: 250,
+                    preventScrolling: true,
+                    startingTop: '4%'
+                  }}
+                  trigger={
+                    <Button node="a" waves="light" href="./reportage" className="light-blue accent-3 white-text text-darken-2">
+                      Commenter...
+                    </Button>
+                  }
+                  >
+                    <Row className="container">
+                      <form className="col s12">
+                          <TextInput id="last-name" s={12} label="Votre nom" validate/>
+                          <TextInput email id="email" s={12} label="Votre adresse mail" validate/>
+                          <TextInput id="web-site" s={12} label="Votre site web (facultatif)"/>
+                          <Textarea id="comment" s={12} label="Votre commentaire" validate/>
+                      </form>
+                    </Row>
+
+                </Modal>
+                
+              </blockquote>
+            </div>
           </Col>
           <Col l={6} m={12} s={12}>
             <h4 className="red-text text-darken-2 white center">MA MÉTÉO</h4>
@@ -163,7 +210,7 @@ function Home() {
           <Col s={12}>
             <h4 className="red-text text-darken-2 white center">ACTUS GÉNÉRALES</h4>
             <div className="container">
-              {/* <AppFootballFeeds /> */}
+              <AppFootballFeeds />
             </div>
           </Col>
         </Row>
