@@ -2,6 +2,7 @@
   "name": "jem",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mentos126.github.io/jem",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -12,6 +13,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "css-loader": "^4.2.2",
+    "gh-pages": "^3.1.0",
     "gsap": "^3.5.1",
     "leaflet": "^1.7.1",
     "materialize-css": "^1.0.0-rc.2",
@@ -25,6 +27,7 @@
     "style-loader": "^1.2.1"
   },
   "scripts": {
+    "deploy": "yarn run build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
