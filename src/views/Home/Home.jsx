@@ -1,7 +1,7 @@
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faExternalLinkAlt, faPrint } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import M from 'materialize-css/dist/js/materialize'
+import M from 'materialize-css/dist/js/materialize'
 import React from 'react'
 import { Button, Carousel, Col, Icon, Modal, NavItem, Row, Textarea, TextInput } from 'react-materialize'
 
@@ -36,14 +36,12 @@ function Home() {
     )
   }
 
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   const instance = M.Carousel.init(document.querySelectorAll('.carousel'), {})[0];
-  //   setInterval(() => {instance.el.M_Carousel.next()}, 1500)
-  
-  // });
+  document.addEventListener('DOMContentLoaded', function() {
+    const instance = M.Carousel.init(document.querySelectorAll('.carousel'), {})[0];
+    setInterval(() => {instance.el.M_Carousel.next()}, 1500)
+  });
 
   const openFacebook = () => {
-    // Linking
 		window.open('//fb.com/share.php?u=http://club.quomodo.com/jem')
   }
 
@@ -85,14 +83,17 @@ function Home() {
           <Col m={6}>
             <h4 className="red-text text-darken-2 white center">LES PARTENAIRES DU CLUB</h4>
             <div className="container center">
-              <a href="https://www.montauban.com/">
-                <img width="197px" src={montauban} alt="montauban" style={{margin: '0'}}/>
-              </a>
-              <img width="197px" src={interSport} alt="montauban" style={{margin: '0'}}/>
+              <Row style={{margin: '0', padding: '0'}}>
+                <a href="https://www.montauban.com/">
+                  <img width="197px" src={montauban} alt="montauban" style={{margin: '0'}}/>
+                </a>
+              </Row>
+              <Row style={{margin: '0', padding: '0'}}>
+                <img width="197px" src={interSport} alt="montauban" style={{margin: '0'}}/>
+              </Row>
             </div>
           </Col>
-        </Row>
-            
+        </Row>     
         <Row>
           <Col l={6}>
             <h4 className="red-text text-darken-2 white center">MATCHS DU WEEKEND</h4>
@@ -197,7 +198,6 @@ function Home() {
                     </Row>
 
                 </Modal>
-                
               </blockquote>
             </div>
           </Col>

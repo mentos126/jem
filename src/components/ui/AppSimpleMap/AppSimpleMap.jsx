@@ -16,11 +16,13 @@ export default function AppSimpleMap ({marker}) {
   const {position, zoom, popup} = marker
 
   return (
-    <Map center={position} zoom={zoom}>
-      <TileLayer url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"/>
-      <Marker position={position}>
-        <Popup>{popup}</Popup>
-      </Marker>
-    </Map>
+    <div>
+      <Map center={position} zoom={zoom}>
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+        <Marker position={position}>
+          <Popup>{popup}</Popup>
+        </Marker>
+      </Map>
+    </div>
   )
 }
